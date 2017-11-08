@@ -11,10 +11,7 @@ module.exports = (deployer) => {
   return deployer.deploy(Sale,
     saleConf.owner,
     saleConf.wallet,
-    tokenConf.initialAmount,
-    tokenConf.tokenName,
-    tokenConf.decimalUnits,
-    tokenConf.tokenSymbol,
+    tokenConf.tokenAddress,
     saleConf.price,
     saleConf.startBlock,
     saleConf.freezeBlock

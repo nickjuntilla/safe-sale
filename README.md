@@ -1,7 +1,6 @@
-# Simple Token Launch
-[ ![Codeship Status for skmgoldin/simple-token-launch](https://app.codeship.com/projects/5392ad30-6041-0135-6b30-4614bcb67ade/status?branch=master)](https://app.codeship.com/projects/239399)
+# Sale based on pre-made token.
 
-This codebase can be used to deploy fixed-price, finite-supply token sales. It uses json conf files to specify sale parameters, supports token distributions for pre-sale buyers, and the distribution of timelocked tokens for founders. It also includes a comprehensive test suite.
+This codebase can be used to deploy fixed-price, finite-supply token sales. The price and time window can be changed. It uses json conf files to specify sale parameters. The token must be generated and migrated FIRST then added to the conf. Tokens MUST be transfered into the contract for the contract to function.
 
 # Initialize
 This was developed using Node 8.2.1, Truffle 3.4.5 and TestRPC 4.0.1.
@@ -33,4 +32,3 @@ DO NOT SHARE OR COMMIT THE MNEMONIC YOU CHANGE IT TO.
 Make sure all the tests pass before deploying. You probably won't have all of your founders' private keys and so expect to see warnings on those tests. It will take a long time for the tests in the "Sale period 0" block to begin since the testRPC has to be force-mined for millions of blocks.
 
 Having done all that you can `truffle migrate --network mainnet`. Save the contents of your build directory, you'll want to have all that data.
-
