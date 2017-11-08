@@ -1,6 +1,6 @@
 # Sale based on pre-made token.
 
-This codebase can be used to deploy fixed-price, finite-supply token sales. The price and time window can be changed. It uses json conf files to specify sale parameters. The token must be generated and migrated FIRST then added to the conf. Tokens MUST be transfered into the contract for the contract to function.
+This codebase can be used to deploy fixed-price, finite-supply token sales. The price and time window can be changed. It uses json conf files to specify sale parameters. The token must be generated and migrated FIRST then added to the conf. Tokens MUST be transfered into the contract for the contract to function. A token can be generated from github/nickjuntilla/token Once the token is migrated use the address generated from the console.
 
 # Initialize
 This was developed using Node 8.2.1, Truffle 3.4.5 and TestRPC 4.0.1.
