@@ -142,6 +142,7 @@ contract Sale {
 
     function changeOwner(address _newOwner)
         onlyOwner
+        public
     {
         require(_newOwner != 0);
         owner = _newOwner;
@@ -150,6 +151,7 @@ contract Sale {
     function changePrice(uint _newPrice)
         onlyOwner
         notFrozen
+        public
     {
         require(_newPrice != 0);
         price = _newPrice;
@@ -158,6 +160,7 @@ contract Sale {
     function changeWallet(address _wallet)
         onlyOwner
         notFrozen
+        public
     {
         require(_wallet != 0);
         wallet = _wallet;
@@ -166,6 +169,7 @@ contract Sale {
     function changeStartBlock(uint _newBlock)
         onlyOwner
         notFrozen
+        public
     {
         require(_newBlock != 0);
 
@@ -175,12 +179,14 @@ contract Sale {
 
     function emergencyToggle()
         onlyOwner
+        public
     {
         emergencyFlag = !emergencyFlag;
     }
 
     function extractTokens()
         onlyOwner
+        public
     {
         tokenReward.transfer(msg.sender, tokenReward.balanceOf(this));
     }
